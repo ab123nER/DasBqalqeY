@@ -9,7 +9,6 @@ ADD . .
 RUN make build
 
 FROM alpine:3.6 as alpine
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
     apk update && \
     apk add -U --no-cache ca-certificates tzdata
 
